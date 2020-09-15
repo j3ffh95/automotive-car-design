@@ -1,4 +1,5 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 
 * {
   box-sizing: border-box;
@@ -6,28 +7,32 @@
 
 body {
   background-color: #fff;
+  font-family: "Roboto", sans-serif;
   margin: 0;
 }
 
 .container {
+  padding: 1rem;
   margin: 0 auto;
   max-width: 100%;
   width: 1000px;
 }
 
 header {
-  background-image: url("./car-bg.jpg");
+  background-image: url("car-bg.jpg");
   background-size: cover;
   background-position: center center;
-  color: #fff;
+  color: white;
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 100px);
+  align-items: flex-start;
+  min-height: calc(100vh - 102px);
 }
 
 .content {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin: auto;
+  max-width: 100%;
 }
 
 .content h1 {
@@ -41,16 +46,13 @@ nav {
 }
 
 nav .logo {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 nav ul {
   display: flex;
   list-style-type: none;
   padding: 0;
-}
-
-nav li {
 }
 
 nav li a {
@@ -65,7 +67,7 @@ nav li a {
 
 .highlight {
   background-color: #00c2ff;
-  color: #fff;
+  color: white;
   padding: 1rem;
   text-decoration: none;
 }
@@ -73,7 +75,6 @@ nav li a {
 footer {
   background-color: #000;
   color: #fff;
-  height: 100px;
   padding: 1rem;
 }
 
@@ -87,4 +88,37 @@ footer ul {
 
 footer strong {
   color: #00c2ff;
+}
+
+footer p {
+  margin: 0;
+}
+
+@media screen and (max-width: 700px) {
+  .content {
+    font-size: 1.4rem;
+    margin: 2rem auto 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav li:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  nav .highlight {
+    display: none;
+  }
+
+  footer ul {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  footer li {
+    margin: 1rem;
+    text-align: center;
+  }
 }
