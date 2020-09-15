@@ -2,8 +2,6 @@
 
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 body {
@@ -17,5 +15,27 @@ header {
   background-position: center center;
   color: #fff;
   display: flex;
+  flex-direction: column;
   min-height: 100vh;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 100%;
+  width: 1000px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav .logo {
+  font-size: 2rem;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
 }
